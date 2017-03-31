@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.administrator.speechtest">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+        &lt;!&ndash; begin: baidu speech sdk&ndash;&gt;
+        &lt;!&ndash; 请填写应用实际的APP_ID &ndash;&gt;
+        -->
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="9454048"/>
+        <!-- &lt;!&ndash; 请填写应用实际的API_KEY &ndash;&gt; -->
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="KTsvuGK1GQXofOD8G0497YRg"/>
+        <!-- &lt;!&ndash; 请填写应用实际的SECRET_KEY &ndash;&gt; -->
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="8187783195ca856854f6fce79c736d3a"/>
+
+        <service
+            android:name="com.baidu.speech.VoiceRecognitionService"
+            android:exported="false"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.baidu.action.RECOGNIZE_SPEECH"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".RecognizerActivity">
+            <intent-filter>
+                <action android:name="com.baidu.action.RECOGNIZE_SPEECH"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SynthetiseActivity">
+
+        </activity>
+
+    </application>
+
+</manifest>

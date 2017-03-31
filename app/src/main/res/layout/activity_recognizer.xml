@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_recognizer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.speechtest.RecognizerActivity">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="22sp"
+        android:hint="请按住说话"
+        />
+
+    <Button
+        android:id="@+id/btn_Touch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按住说话"/>
+
+</LinearLayout>
