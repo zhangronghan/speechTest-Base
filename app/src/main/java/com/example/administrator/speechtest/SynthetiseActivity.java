@@ -177,7 +177,7 @@ public class SynthetiseActivity extends AppCompatActivity implements SpeechSynth
 
     @Override
     public void onSynthesizeStart(String s) {
-        Log.d(TAG,">>>onSynthesizeStart<<<"+s);
+        Log.d(TAG,">>>onSynthesizeStart<<<  "+s);
     }
 
     @Override
@@ -187,27 +187,27 @@ public class SynthetiseActivity extends AppCompatActivity implements SpeechSynth
 
     @Override
     public void onSynthesizeFinish(String s) {
-        Log.d(TAG,">>>onSynthesizeFinish<<<"+s);
+        Log.d(TAG,">>>onSynthesizeFinish<<<  "+s);
     }
 
     @Override
     public void onSpeechStart(String s) {
-        Log.d(TAG,">>>onSpeechStart<<<"+s);
+        Log.d(TAG,">>>onSpeechStart<<<  "+s);
     }
 
     @Override
     public void onSpeechProgressChanged(String s, int i) {
-        Log.d(TAG,">>>onSpeechProgressChanged<<<"+s);
+        Log.d(TAG,">>>onSpeechProgressChanged<<<  "+s);
     }
 
     @Override
     public void onSpeechFinish(String s) {
-        Log.d(TAG,">>>onSpeechFinish<<<"+s);
+        Log.d(TAG,">>>onSpeechFinish<<<  "+s);
     }
 
     @Override
     public void onError(String s, SpeechError speechError) {
-        Log.d(TAG,">>>onError<<<"+s+" SpeechError "+speechError.description);
+        Log.d(TAG,">>>onError<<<  "+s+"  SpeechError "+speechError.description);
     }
 
 
